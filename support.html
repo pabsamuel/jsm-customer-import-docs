@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Customer &amp; Organization Import — Atesen Software</title>
+<style>
+  :root { --bg:#ffffff; --fg:#172b4d; --muted:#5e6c84; --line:#dfe1e6; --accent:#0b6ea8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12161c; --fg:#e6edf3; --muted:#9aa7b4; --line:#2b323b; --accent:#5aa9d6; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 16px 64px; }
+  h1 { font-size:1.6rem; line-height:1.3; margin:0 0 8px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; }
+  h3 { font-size:1rem; margin:24px 0 6px; }
+  p, li { color:var(--fg); }
+  ul, ol { padding-left:20px; }
+  a { color:var(--accent); }
+  code { background:rgba(127,127,127,.15); padding:1px 4px; border-radius:4px; font-size:.9em; }
+  table { border-collapse:collapse; width:100%; margin:16px 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:rgba(127,127,127,.08); }
+  hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
+  .back { display:inline-block; margin-bottom:24px; font-size:.9rem; }
+  footer { margin-top:40px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">&larr; Customer &amp; Organization Import for Jira Service Management</a>
+<h1>Support</h1>
+<p><strong>App:</strong> Customer &amp; Organization Import for Jira Service Management · <strong>Publisher:</strong> Atesen Software
+<strong>Email:</strong> sametatesen2@gmail.com · <strong>First response target:</strong> 2 business days (Monday–Friday, Istanbul time, UTC+3)</p>
+<h2>Before you write</h2>
+<ol>
+<li>Open <strong>Job history</strong> in the app and note the <strong>job ID</strong>.</li>
+<li>Download the <strong>results CSV</strong>. You may delete the email column before sending it — job ID, status and error code are what we need.</li>
+<li>Note whether the run was a dry run or a real run, and roughly how many rows it had.</li>
+</ol>
+<h2>What to include</h2>
+<ul>
+<li>Your site URL (<code>yoursite.atlassian.net</code>)</li>
+<li>Job ID and the error code shown (for example <code>API_403_ADMIN_REQUIRED</code>)</li>
+<li>What you expected to happen and what happened instead</li>
+</ul>
+<h2>Severity and response</h2>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Example</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>The app wrote wrong data, or emails went out that you did not ask for</td>
+<td>Same day acknowledgement, fix or in-app warning within 2 business days</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Imports do not run at all</td>
+<td>3 business days</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>Question, or a feature request</td>
+<td>Answered in the next weekly pass</td>
+</tr>
+</tbody>
+</table>
+<h2>Known limits</h2>
+<ul>
+<li>Creating customers requires the <strong>Jira Administrators</strong> global permission. This is an Atlassian requirement, not an app setting.</li>
+<li>Up to <strong>10,000 rows</strong> per job. Split larger files.</li>
+<li>Atlassian rate limits can slow very large imports. The app waits and continues automatically.</li>
+<li>Job data, including result files, is deleted <strong>30 days</strong> after the job was created.</li>
+<li>The app works with Jira Service Management. It does not manage Customer Service Management (CSM) profiles.</li>
+</ul>
+<h2>Updates</h2>
+<p>Releases are published through the Atlassian Marketplace with release notes. Minor updates install automatically; an update that requires new permissions needs a Jira administrator to approve it.</p>
+<h2>Security reports</h2>
+<p>Email sametatesen2@gmail.com with the subject line <strong>SECURITY</strong>. We acknowledge within 2 business days and will tell you when a fix ships.</p>
+<footer>Atesen Software · <a href="mailto:sametatesen2@gmail.com">sametatesen2@gmail.com</a></footer>
+</div>
+</body>
+</html>
