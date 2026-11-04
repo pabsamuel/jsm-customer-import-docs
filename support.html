@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support — Customer &amp; Organization Import — Atesen Software</title>
+<title>Support — Atesen Customer Import — Atesen Software</title>
 <style>
   :root { --bg:#ffffff; --fg:#172b4d; --muted:#5e6c84; --line:#dfe1e6; --accent:#0b6ea8; }
   @media (prefers-color-scheme: dark) { :root { --bg:#12161c; --fg:#e6edf3; --muted:#9aa7b4; --line:#2b323b; --accent:#5aa9d6; } }
@@ -27,20 +27,21 @@
 </head>
 <body>
 <div class="wrap">
-<a class="back" href="./">&larr; Customer &amp; Organization Import for Jira Service Management</a>
+<a class="back" href="./">&larr; Atesen Customer Import for Jira Service Management</a>
 <h1>Support</h1>
-<p><strong>App:</strong> Customer &amp; Organization Import for Jira Service Management · <strong>Publisher:</strong> Atesen Software
+<p><strong>App:</strong> Atesen Customer Import for Jira Service Management · <strong>Publisher:</strong> Atesen Software
 <strong>Email:</strong> support@atesensoftware.com · <strong>First response target:</strong> 2 business days (Monday–Friday, Istanbul time, UTC+3)</p>
+<p>For installation, app access, CSV examples and results, read the <a href="./">user guide</a>.</p>
 <h2>Before you write</h2>
 <ol>
-<li>Open <strong>Job history</strong> in the app and note the <strong>job ID</strong>.</li>
-<li>Download the <strong>results CSV</strong>. You may delete the email column before sending it — job ID, status and error code are what we need.</li>
-<li>Note whether the run was a dry run or a real run, and roughly how many rows it had.</li>
+<li>Open <strong>History</strong> in the app and note the job date, file name and status. If you downloaded a report from History, its file name also includes the job ID.</li>
+<li>Download the <strong>results CSV</strong>. Remove emails, names, account IDs, organization details and other customer data before sharing it. Include the status and error code.</li>
+<li>Note whether the issue occurred in Preview or after Start import, and roughly how many rows the file contained.</li>
 </ol>
 <h2>What to include</h2>
 <ul>
 <li>Your site URL (<code>yoursite.atlassian.net</code>)</li>
-<li>Job ID and the error code shown (for example <code>API_403_ADMIN_REQUIRED</code>)</li>
+<li>Job date/file name (or job ID if available) and the error code shown (for example <code>API_403_ADMIN_REQUIRED</code>)</li>
 <li>What you expected to happen and what happened instead</li>
 </ul>
 <h2>Severity and response</h2>
@@ -74,7 +75,7 @@
 <ul>
 <li>Creating customers requires the <strong>Jira Administrators</strong> global permission. This is an Atlassian requirement, not an app setting.</li>
 <li>Up to <strong>10,000 rows</strong> per job. Split larger files.</li>
-<li>Atlassian rate limits can slow very large imports. The app waits and continues automatically.</li>
+<li>Atlassian rate limits can slow very large imports. The app retries temporary failures; if a job remains paused, review its results and use Resume.</li>
 <li>Job data, including result files, is deleted <strong>30 days</strong> after the job was created.</li>
 <li>The app works with Jira Service Management. It does not manage Customer Service Management (CSM) profiles.</li>
 </ul>

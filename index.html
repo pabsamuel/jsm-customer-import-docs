@@ -3,45 +3,131 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Customer &amp; Organization Import for Jira Service Management — Atesen Software</title>
+<title>Atesen Customer Import for Jira Service Management — User Guide</title>
 <style>
   :root { --bg:#ffffff; --fg:#172b4d; --muted:#5e6c84; --line:#dfe1e6; --accent:#0b6ea8; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#12161c; --fg:#e6edf3; --muted:#9aa7b4; --line:#2b323b; --accent:#5aa9d6; } }
+  @media (prefers-color-scheme: dark) { :root { --bg:#12161c; --fg:#e6edf3; --muted:#a5b1c2; --line:#384353; --accent:#74b9e0; } }
   * { box-sizing:border-box; }
+  html { scroll-padding-top:16px; }
   body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-  .wrap { max-width:720px; margin:0 auto; padding:48px 16px 64px; }
-  h1 { font-size:1.6rem; line-height:1.3; margin:0 0 8px; }
-  p.sub { color:var(--muted); margin:0 0 32px; }
-  ul { padding-left:20px; }
-  a { color:var(--accent); }
-  .cards { display:grid; gap:12px; grid-template-columns:1fr; margin:28px 0; }
-  @media (min-width:620px) { .cards { grid-template-columns:repeat(3,1fr); } }
-  .card { border:1px solid var(--line); border-radius:10px; padding:16px; text-decoration:none; color:inherit; display:block; }
-  .card strong { display:block; margin-bottom:4px; }
-  .card span { color:var(--muted); font-size:.9rem; }
-  footer { margin-top:40px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:.9rem; }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  h1 { font-size:1.6rem; line-height:1.3; margin:0 0 12px; }
+  h2 { font-size:1.25rem; line-height:1.4; margin:40px 0 12px; }
+  h3 { font-size:1.05rem; margin:24px 0 8px; }
+  p { margin:0 0 16px; }
+  .sub { color:var(--muted); }
+  ul,ol { padding-left:24px; }
+  li { margin-bottom:8px; }
+  a { color:var(--accent); text-underline-offset:3px; }
+  a:hover { text-decoration-thickness:2px; }
+  a:focus-visible,[tabindex]:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+  ::selection { background:var(--accent); color:var(--bg); }
+  nav { border-block:1px solid var(--line); padding:16px 0; margin:24px 0; }
+  nav ul { margin:0; display:flex; flex-wrap:wrap; gap:8px 24px; list-style:none; padding:0; }
+  nav li { margin:0; }
+  code { font-size:.9em; overflow-wrap:anywhere; }
+  pre { padding:16px; border:1px solid var(--line); overflow:auto; line-height:1.5; }
+  pre code { overflow-wrap:normal; }
+  .table-wrap { overflow:auto; margin:16px 0; }
+  table { width:100%; border-collapse:collapse; font-size:.95rem; }
+  th,td { border:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; }
+  th { font-weight:600; }
+  footer { margin-top:40px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); }
+  .skip { position:absolute; top:-100px; left:16px; background:var(--bg); padding:8px; }
+  .skip:focus { top:8px; }
+  @media (max-width:480px) { .wrap { padding-top:28px; } }
 </style>
 </head>
 <body>
+<a class="skip" href="#guide">Skip to user guide</a>
 <div class="wrap">
-  <h1>Customer &amp; Organization Import for Jira Service Management</h1>
-  <p class="sub">A Forge app by Atesen Software. One CSV creates your JSM customers and organizations, links them, and gives you a result for every row.</p>
-
-  <ul>
-    <li>Creates customer accounts and the organizations that don't exist yet</li>
-    <li>Adds customers to their organizations and to the service spaces you choose</li>
-    <li>Dry-run preview with a downloadable error file, and a result file for every run</li>
-    <li>Safe to re-run: existing customers are detected and skipped</li>
-    <li>Runs entirely on Atlassian — no external servers</li>
-  </ul>
-
-  <div class="cards">
-    <a class="card" href="support.html"><strong>Support</strong><span>How to get help, response times, known limits</span></a>
-    <a class="card" href="privacy.html"><strong>Privacy</strong><span>What the app processes and for how long</span></a>
-    <a class="card" href="terms.html"><strong>End user terms</strong><span>Licence, responsibilities, liability</span></a>
-  </div>
-
-  <footer>Atesen Software · <a href="mailto:support@atesensoftware.com">support@atesensoftware.com</a></footer>
+<header>
+  <h1>Atesen Customer Import for Jira Service Management</h1>
+  <p>Import customers and organization memberships from a CSV, preview the changes, and download a result for each processed row.</p>
+  <p class="sub">User guide · Atesen Software · Previously named Customer &amp; Organization Import for Jira Service Management. The installed admin page is labelled <strong>Customer &amp; Organization Import</strong>.</p>
+</header>
+<nav aria-label="Guide sections"><ul>
+  <li><a href="#access">Open the app</a></li><li><a href="#csv">CSV format</a></li><li><a href="#import">Run an import</a></li><li><a href="#results">Check results</a></li><li><a href="#limits">Limits and support</a></li>
+</ul></nav>
+<main id="guide">
+<section aria-labelledby="access">
+<h2 id="access">Open the app</h2>
+<ol>
+  <li>Ask a site administrator to install the app on the intended <strong>Jira Cloud site with Jira Service Management</strong>, using the existing Marketplace listing. If Atlassian requests approval for app permissions, an administrator must complete it. Running imports requires an active app licence or trial.</li>
+  <li>Sign in to that same site with the <strong>Jira Administrators global permission</strong>. Being a service project administrator, agent, or portal customer alone is insufficient.</li>
+  <li>Open Jira <strong>Settings → Apps</strong>. In the Apps section of the administration sidebar, select <strong>Customer &amp; Organization Import</strong>. This is an administration page, outside the customer help centre and portal.</li>
+  <li>The app opens on <strong>Upload</strong>, followed by <strong>Map → Preview → Run → Results</strong>. <strong>History</strong> opens recent imports. If the entry is missing, confirm the installation, site and administrator permissions with your site administrator.</li>
+</ol>
+<p>Jira controls access and the service spaces available to the signed-in administrator. Import jobs run with the permissions of the administrator who starts or resumes them. No customer portal module is provided.</p>
+</section>
+<section aria-labelledby="csv">
+<h2 id="csv">Prepare the CSV</h2>
+<p>Save a plain-text <strong>UTF-8 CSV</strong> with a header row, using a <strong>comma or semicolon</strong> as the column delimiter. A UTF-8 byte order mark (BOM) is supported. Blank lines are skipped. Use at most <strong>10,000 data rows</strong> per job; split larger files.</p>
+<p>Map your headers in the <strong>Map</strong> step. Header names need not be exact: the app suggests common names, and you can select the correct columns manually. The examples use <code>email</code>, <code>name</code> and <code>organizations</code>, which are detected automatically.</p>
+<div class="table-wrap" role="region" aria-label="CSV fields" tabindex="0"><table>
+<thead><tr><th scope="col">Example header</th><th scope="col">Required?</th><th scope="col">Mapping and behaviour</th></tr></thead>
+<tbody>
+<tr><td><code>email</code></td><td>Yes</td><td>Map to Email column. One address per row, at most 254 characters. Leading/trailing spaces are trimmed and addresses are lowercased. Empty or invalid addresses are excluded from processing and reported in Preview.</td></tr>
+<tr><td><code>name</code></td><td>No</td><td>Map to Name column. Leading/trailing spaces are trimmed. If omitted or blank, a new customer's name defaults to the part of the email before <code>@</code>. This is not a bulk rename tool for existing accounts.</td></tr>
+<tr><td><code>organizations</code></td><td>No</td><td>Map to Organizations column. Separate multiple organization names inside a cell with <code>;</code> or <code>|</code>. Empty entries are ignored. Each name has a 200-character limit; overlong names are reported and omitted while the customer row can still be processed.</td></tr>
+</tbody></table></div>
+<p>Destination service spaces are selected with the app's checkboxes; there is no CSV field for a project key or service space ID. Extra columns are not imported. The internal name field is <code>displayName</code>; if your header uses that name, select it manually under Name column.</p>
+<h3>Comma-separated example</h3>
+<p>Fictional data for format testing. Replace the addresses with customers you are authorised to import before running a real job.</p>
+<pre><code>email,name,organizations
+alex@example.com,Alex Example,Northwind Demo|Contoso Demo
+blair@example.com,"Blair, Example",Northwind Demo
+casey@example.com,,
+</code></pre>
+<p><a href="sample-customers.csv" download>Download the comma-separated sample CSV</a></p>
+<h3>Semicolon-separated example</h3>
+<pre><code>email;name;organizations
+alex@example.com;Alex Example;"Northwind Demo;Contoso Demo"
+blair@example.com;"Blair ""Example""";Northwind Demo
+casey@example.com;;
+</code></pre>
+<p><a href="sample-customers-semicolon.csv" download>Download the semicolon-separated sample CSV</a></p>
+<p>Wrap a field in double quotes when it contains the column delimiter, a line break, or a double quote. Double any quote inside a quoted field: <code>"Blair ""Example"""</code>. With semicolon-delimited columns, quote a cell containing semicolon-separated organizations, or use <code>|</code>. Organization names themselves cannot contain literal <code>;</code> or <code>|</code>: both are always treated as membership separators.</p>
+<p>Malformed quoting and rows with too many columns are rejected before import. Missing trailing optional cells are treated as blank. Excel workbooks (<code>.xlsx</code>), legacy encodings such as Windows-1252, pasted rows, and tab-separated input are not documented input formats for this app; export to UTF-8 comma- or semicolon-separated CSV.</p>
+</section>
+<section aria-labelledby="import">
+<h2 id="import">Preview and run</h2>
+<ol>
+<li><strong>Upload:</strong> choose your CSV file. If the file is rejected, repair the indicated quoting or column problem and choose the file again.</li>
+<li><strong>Map:</strong> select the email column and optional name and organizations columns. Select destination service spaces if customers should receive access to those spaces. With no space selected, customer and organization processing can still run, but no service-space access is added.</li>
+<li>Review <strong>Create organizations that don't exist yet</strong> (enabled by default). Existing organizations are matched ignoring case, leading/trailing spaces and repeated internal whitespace. Turn this option off to use only matching organizations; missing organizations will not be created and their memberships cannot be added.</li>
+<li>Select <strong>Preview</strong>. Check valid rows, invalid/empty emails, duplicates, existing organization matches and organizations to create. Preview validates and stores the job and reads organizations; it does not create customers or organizations. Its runtime estimate is approximate. It does not check every email against existing customers.</li>
+<li>If there are problems, use <strong>Download errors CSV</strong>. Correct your source file and upload it again before starting. Only the first occurrence of a normalized email in a file is used; later duplicates do not merge their names or memberships. The job retains at most 500 validation problems; after correcting them, preview again to find any remaining problems. The displayed row numbers refer to parsed data order plus the header, so skipped blank lines can shift them relative to a spreadsheet.</li>
+<li>Select <strong>Start import</strong> when the preview is correct. This writes to Jira: it creates missing customers, optionally creates organizations, and adds requested memberships and access. Selected service spaces receive the mapped organizations as well as the customers. Check that this access is intended before starting.</li>
+<li>The job runs in the background. You may close the tab and return to <strong>History</strong>. Use <strong>Pause</strong> to request a pause; work already in progress may finish. Use <strong>Resume</strong> for paused or stalled jobs. Temporary Jira errors can leave a job paused for retry; resume the same job rather than starting an overlapping import.</li>
+</ol>
+<p>Existing customer accounts are reused when Jira returns a matching account ID; the app can still add their requested memberships and service-space access. Existing accounts are not simply skipped. If an account cannot be resolved, the result reports <code>EXISTING_NOT_LINKED</code>; inspect the affected memberships before retrying.</p>
+</section>
+<section aria-labelledby="results">
+<h2 id="results">Check every result</h2>
+<p>After completion select <strong>Download results CSV</strong>, or open <strong>History → Results CSV</strong>. A finished job can contain failed or incomplete rows: check the report rather than relying on the Done label or created count.</p>
+<p>The result columns are <code>row</code>, <code>email</code>, <code>status</code>, <code>accountId</code>, <code>organizations_added</code>, <code>organizations_failed</code>, <code>service_spaces_added</code>, <code>error_code</code> and <code>error_message</code>. Service-space entries are IDs. Preview validation errors are in the separate errors CSV (<code>rowNumber,email,code,detail</code>); excluded rows do not receive normal processing results.</p>
+<ul>
+<li><code>created</code> / <code>existing</code>: a customer was created or reused. Check membership and service-space columns too.</li>
+<li><code>created_partial</code> / <code>existing_partial</code>: the customer is ready, but some requested organization or service-space work is incomplete. Inspect <code>organizations_failed</code> and the error columns.</li>
+<li><code>failed</code>: inspect the error code and message; correct the input or permissions before a new import.</li>
+<li><code>failed_retryable</code>: a temporary error remains. Resume the paused job to retry those rows while retaining completed work.</li>
+</ul>
+<p>For <code>API_403_ADMIN_REQUIRED</code>, check the Jira Administrators global permission and app consent. For organization or service-space errors, check the selected destination, access rights and any unresolved organization message. Verify representative customers, memberships and access in Jira after the run. Download reports before their retention period expires.</p>
+</section>
+<section aria-labelledby="limits">
+<h2 id="limits">Scope, limits and support</h2>
+<ul>
+<li>Jira Service Management Cloud only; this app does not manage Customer Service Management (CSM) profiles, Jira issues, tickets, assets or attachments.</li>
+<li>The app adds customers and memberships. It does not provide an undo operation, delete customers or organizations, remove existing memberships, or merge duplicate organizations. Review existing duplicate organization names in Jira first.</li>
+<li>The importer has no invitation-email action. Your site's own Jira notifications and automations remain subject to its configuration.</li>
+<li>Jira rate limits and temporary service failures can slow or pause imports. No fixed completion time is guaranteed.</li>
+<li>Job rows and results are held in Atlassian Forge storage and scheduled for cleanup after 30 days from job creation. Closing the browser does not delete a job. See the <a href="privacy.html">privacy policy</a>.</li>
+</ul>
+<p>Contact <a href="mailto:support@atesensoftware.com">support@atesensoftware.com</a>. Include the app version, affected step, job date/file name and error code. Remove customer emails, names and organization details from shared reports or screenshots. Never send credentials or API tokens. See <a href="support.html">support details and response targets</a>.</p>
+</section>
+</main>
+<footer>Atesen Software · <a href="privacy.html">Privacy</a> · <a href="terms.html">End user terms</a> · <a href="support.html">Support</a></footer>
 </div>
 </body>
 </html>
