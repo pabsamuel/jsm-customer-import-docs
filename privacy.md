@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**App:** Customer & Organization Import for Jira Service Management
+**App:** Atesen Customer Import for Jira Service Management (formerly Customer & Organization Import)
 **Publisher:** Atesen Software (independent developer, Türkiye)
 **Contact:** sametatesen2@gmail.com
 **Last updated:** 26 September 2026

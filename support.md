@@ -1,6 +1,6 @@
 # Support
 
-**App:** Customer & Organization Import for Jira Service Management · **Publisher:** Atesen Software
+**App:** Atesen Customer Import for Jira Service Management (formerly Customer & Organization Import) · **Publisher:** Atesen Software
 **Email:** sametatesen2@gmail.com · **First response target:** 2 business days (Monday–Friday, Istanbul time, UTC+3)
 
 ## Before you write

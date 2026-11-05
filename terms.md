@@ -1,6 +1,6 @@
 # End User Terms
 
-**App:** Customer & Organization Import for Jira Service Management
+**App:** Atesen Customer Import for Jira Service Management (formerly Customer & Organization Import)
 **Publisher:** Atesen Software (independent developer, Türkiye)
 **Last updated:** 26 September 2026
 
