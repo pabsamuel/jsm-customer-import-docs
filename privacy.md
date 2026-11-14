@@ -2,7 +2,7 @@
 
 **App:** Atesen Customer Import for Jira Service Management (formerly Customer & Organization Import)
 **Publisher:** Atesen Software (independent developer, Türkiye)
-**Contact:** sametatesen2@gmail.com
+**Contact:** support@atesensoftware.com
 **Last updated:** 26 September 2026
 
 ## 1. What this app does with data
@@ -33,7 +33,7 @@ For the customer data processed by this app, your organization is the controller
 
 ## 6. Your requests
 
-To ask about data handled by this app, or to request deletion of app data on your site, write to sametatesen2@gmail.com. Data deletion for your own Jira Service Management customers is done in Atlassian Administration, not in this app.
+To ask about data handled by this app, or to request deletion of app data on your site, write to support@atesensoftware.com. Data deletion for your own Jira Service Management customers is done in Atlassian Administration, not in this app.
 
 ## 7. Security
 

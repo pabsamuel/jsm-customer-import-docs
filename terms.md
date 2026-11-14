@@ -20,7 +20,7 @@ The app performs bulk operations that create accounts and change organization me
 
 ## 4. Support
 
-Support is provided by email at sametatesen2@gmail.com, with a target first response of two business days (Monday–Friday, Istanbul time). See the support page for scope and severity levels.
+Support is provided by email at support@atesensoftware.com, with a target first response of two business days (Monday–Friday, Istanbul time). See the support page for scope and severity levels.
 
 ## 5. No warranty
 
@@ -40,4 +40,4 @@ These terms are governed by the laws of the Republic of Türkiye, and the courts
 
 ## 9. Contact
 
-Atesen Software — sametatesen2@gmail.com
+Atesen Software — support@atesensoftware.com

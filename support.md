@@ -1,7 +1,7 @@
 # Support
 
 **App:** Atesen Customer Import for Jira Service Management (formerly Customer & Organization Import) · **Publisher:** Atesen Software
-**Email:** sametatesen2@gmail.com · **First response target:** 2 business days (Monday–Friday, Istanbul time, UTC+3)
+**Email:** support@atesensoftware.com · **First response target:** 2 business days (Monday–Friday, Istanbul time, UTC+3)
 
 ## Before you write
 
@@ -37,4 +37,4 @@ Releases are published through the Atlassian Marketplace with release notes. Min
 
 ## Security reports
 
-Email sametatesen2@gmail.com with the subject line **SECURITY**. We acknowledge within 2 business days and will tell you when a fix ships.
+Email support@atesensoftware.com with the subject line **SECURITY**. We acknowledge within 2 business days and will tell you when a fix ships.
